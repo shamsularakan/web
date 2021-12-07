@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    color: var(--writing-color);
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+:root {
+    --main-color: #0CA7AA;
+    --secondary-color: #FFAB11;
+    --third-color: #E61946;
+    --forth-color: #AA2891;
+    --fith-color: #502D8C;
+    --writing-color: #24343F;
+    --section-background: #f6f6f6;
+
+    --section-padding: 60px;
+}
+
+/* small screen */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+}
+
+/* madium screen */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+
+    }
+}
+
+/* large screen */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+
+    }
+}
+
+.container {
+
+    margin: auto;
+    padding: 0 15px;
+}
+
+.special-heading {
+    color: #ededed;
+    font-size: 80px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.special-heading+p {
+    margin: -50px 0 0;
+    font-size: 18px;
+    text-align: center;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .special-heading {
+        font-size: 50px;
+    }
+
+    .special-heading+p {
+        margin: -35px 0 0;
+    }
+
+}
+
+
+/* start header */
+
+.header {
+    background-color: var(--main-color);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header h1 {
+
+    font-size: 20px;
+    height: 30px;
+}
+
+.header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .links {
+    position: relative;
+}
+
+.header .links ul {
+    list-style: none;
+    text-decoration: none;
+    background-color: var(--fith-color);
+    position: absolute;
+    left: 0;
+    min-width: 200px;
+    top: calc(100% + 10px);
+    display: none;
+    z-index: 1;
+}
+
+
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--forth-color) transparent;
+    position: absolute;
+    left: 5px;
+    top: -20px;
+}
+
+.header .links ul a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    transition: 0.35s;
+}
+
+.header .links ul a:hover {
+    padding-right: 20px;
+
+}
+
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #fff;
+
+}
+
+.header .links .icon {
+    padding: 10%;
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.header .links .icon span {
+    height: 3px;
+    width: 94%;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+
+/* end header */
+
+/* start intro  */
+.intro-box {
+    background-image: url(../img/mountain.jpg);
+    /* background-image: linear-gradient(108.1deg, #005F99 11.2%, rgba(217, 239, 242, 1) 88.9%); */
+    background-size: cover;
+    height: calc(100vh - 55px);
+    background-color: var(--main-color);
+    position: relative;
+}
+
+.intro-box .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+}
+
+
+.intro-box .intro-text h1 {
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+}
+
+.intro-box .intro-text p {
+    font-size: 20px;
+    line-height: 2;
+    color: var(--writing-color);
+}
+
+.intro-box .intro-text a {
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    color: #f1f1f1;
+    padding: 10px 20px;
+
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    margin-top: 20px;
+}
+
+/* end intro */
+
+/* start featutres */
+.features {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+@media (max-width:1199px) {
+    .features .container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.features .feat {
+    padding: 10px;
+    text-align: center;
+}
+
+.features .feat i {
+    color: var(--secondary-color);
+}
+
+.features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+    color: var(--main-color);
+}
+
+.features .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 16px;
+}
+
+/* end featutres */
+
+/* start sercvices */
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 100px;
+}
+
+.services .services-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width:767px) {
+    .services .services-content .srv {
+
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .services-content .srv i {
+    color: var(--secondary-color);
+    flex-basis: 60px;
+    font-size: 30px;
+}
+
+.services .services-content .srv .text {
+    flex: 1;
+}
+
+.services .services-content .srv h3 {
+    margin: 0 0 20px;
+    color: var(--main-color);
+}
+
+.services .services-content .srv .text p {
+    color: #999;
+    line-height: 1.8;
+}
+
+.services .services-content .image img {
+    width: 260px;
+    height: 300px;
+}
+
+.services .services-content .image {
+    text-align: center;
+    position: relative;
+}
+
+.services .services-content .image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: var(--secondary-color);
+    width: 120px;
+    height: calc(100% + 100px);
+    top: -50px;
+    position: absolute;
+    z-index: -1;
+}
+
+@media (max-width:1199px) {
+    .display-none {
+        display: none;
+    }
+}
+
+
+
+/* end sercvices */
+
+/*  start portfolio  */
+
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background: var(--section-background);
+}
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 100px;
+}
+
+.portfolio .portfolio-content .card {
+    background-color: white;
+}
+
+.portfolio .portfolio-content .card img {
+    max-width: 100%;
+}
+
+.portfolio .portfolio-content .card .info {
+    padding: 20px;
+}
+
+.portfolio .portfolio-content .card h3 {
+    color: var(--main-color);
+}
+
+.portfolio .portfolio-content .card p{
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/*  end portfolio  */
